@@ -2,11 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/l.png" />
+    <link rel="icon" type="image/svg+xml" href="./img/l.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steak house</title>
   </head>
   <body>
+    <header class="header">
+      <a href="#" aria-labelledby="Go to homepage">
+        <img src="./img/l.png" alt="" class="header__logo" />
+      </a>
+      <button id="hamburger" class="hamburger" aria-label="Menu">
+        <span class="hamburger__container" tabindex="-1">
+          <span class="hamburger__bars"></span>
+        </span>
+      </button>
+      <nav id="nav" class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Steaks</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Burgers</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">French fries</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Drinks</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Gdzie dowozimy?</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Kontakt</a>
+          </li>
+        </ul>
+        <ul class="nav__list nav__list--icons">
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <img
+                src="./img/nav-icon/mojekonto.svg"
+                alt=""
+                class="nav__icon"
+              />
+              <span class="nav__text">Moje konto</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <img src="./img/nav-icon/koszyk.svg" alt="" class="nav__icon" />
+              <span class="nav__text">Koszyk</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__link--accent">
+              <img
+                src="./img/nav-icon/zamow_ikona.svg"
+                alt=""
+                class="nav__icon"
+              />
+              <span class="nav__text">Zamów</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <script type="module" src="/js/scripts.js"></script>
   </body>
 </html>
