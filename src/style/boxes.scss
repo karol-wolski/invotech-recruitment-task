@@ -1,0 +1,71 @@
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-gap: 1.6rem;
+  margin-left: clamp(1rem, 2vw, 2rem);
+  margin-right: clamp(1rem, 2vw, 2rem);
+}
+
+.box {
+  position: relative;
+  color: $white;
+  &__image {
+    width: 100%;
+    aspect-ratio: 2/1;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    position: absolute;
+    width: 60%;
+    top: 0;
+    left: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    @media screen and (min-width: 1200px) {
+      padding-top: 8.2rem;
+      padding-bottom: 8.2rem;
+      padding-left: 12.4rem;
+      padding-right: 12.4rem;
+      width: 65%;
+    }
+  }
+  &__title {
+    font-size: clamp(1.6rem, 2vw, 3.5rem);
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    line-height: clamp(1rem, 3vw, 3.2rem);
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    line-height: clamp(2.2rem, 3vw, 3.2rem);
+  }
+
+  &__accent {
+    background-color: $black;
+    color: $white;
+
+    &--red {
+      background-color: $red;
+    }
+  }
+}
+
+.iconList {
+  display: none;
+  list-style: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 1.2rem;
+    }
+  }
+}
