@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./img/l.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>Steak house</title>
   </head>
   <body>
@@ -67,6 +71,53 @@
         </ul>
       </nav>
     </header>
+
+    <div class="swiper slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slider__slide">
+          <div class="slide">
+            <h2 class="slide__title">
+              <span>Rabat 10%</span> na pierwsze zamówienie!
+            </h2>
+            <p class="slide__desc">
+              Do 20 stycznia złóż zamówienie na stronie i skorzystaj z
+              <span> promocji -10%.</span>
+              Spiesz się, czas trwania promocji do końca lutego.
+            </p>
+            <a href="#" class="btn">Zamów online</a>
+          </div>
+          <img src="./img/slider/Bitmapv.png" alt="" class="slider__image" />
+        </div>
+        <div class="swiper-slide slider__slide">
+          <div class="slide">
+            <h2 class="slide__title">Zestaw dla <span>3 osób</span></h2>
+            <p class="slide__desc">
+              Razem smakuje lepiej! Zamów zestawy obiadowy dla 3 osób już od
+              <span>39 zł</span>
+            </p>
+            <a href="#" class="btn">Zamów online</a>
+          </div>
+          <img src="./img/slider/Bitmapv.png" alt="" class="slider__image" />
+        </div>
+        <div class="swiper-slide slider__slide">
+          <div class="slide">
+            <h2 class="slide__title">
+              <span>Rabat 5%</span> na co piąte zamówienie!
+            </h2>
+            <p class="slide__desc">
+              Do 20 stycznia złóż zamówienie na stronie i skorzystaj z
+              <span> promocji -5%. </span>
+              Spiesz się, czas trwania promocji do końca lutego.
+            </p>
+            <a href="#" class="btn">Zamów online</a>
+          </div>
+          <img src="./img/slider/Bitmapv.png" alt="" class="slider__image" />
+        </div>
+      </div>
+      <div class="swiper-pagination slider__pagination"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="/js/scripts.js"></script>
   </body>
 </html>
