@@ -1,0 +1,12 @@
+$zIndex: (
+  hamburger: 20,
+  navigation: 10,
+);
+
+@function zIndex($key) {
+  @return map-get($zIndex, $key);
+}
+
+@mixin zIndex($key) {
+  z-index: zIndex($key);
+}

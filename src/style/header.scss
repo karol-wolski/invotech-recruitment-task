@@ -1,0 +1,163 @@
+@import "./colors.scss";
+@import "./zIndex.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 166rem;
+  margin: 1.2rem auto;
+  padding: 0 3rem;
+  position: relative;
+
+  &__logo {
+    margin-right: 7rem;
+  }
+}
+
+.nav {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+
+  top: 0;
+  position: fixed;
+  left: 0;
+  background: $white;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  @include zIndex(navigation);
+
+  &--open {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      width: auto;
+    }
+
+    &--icons {
+      flex-direction: row;
+      height: auto;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      &:first-of-type {
+        margin-left: 1rem;
+      }
+      &:not(:last-of-type) {
+        margin-right: clamp(3rem, 3vw, 5.3rem);
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: $black;
+    &--accent {
+      background-color: $red;
+      color: $white;
+      border-radius: 1rem;
+      padding: 1.2rem 2rem 0.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      font-weight: bold;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: inline;
+    }
+  }
+}
+
+.hamburger {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  @include zIndex(hamburger);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 3.5rem;
+  }
+
+  &__bars {
+    position: absolute;
+    width: 3.5rem;
+    height: 0.3rem;
+    background-color: $black;
+
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      width: 3.5rem;
+      height: 0.3rem;
+      background-color: $black;
+      content: "";
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      bottom: -0.8rem;
+    }
+  }
+
+  &--active {
+    .hamburger__bars {
+      transform: rotate(225deg);
+      position: fixed;
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
